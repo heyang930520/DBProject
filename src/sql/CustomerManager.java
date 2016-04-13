@@ -1,6 +1,6 @@
 package sql;
 /**
- * 
+ * Functions on the Customer table.
  * @author yhe
  * 
  */
@@ -14,6 +14,7 @@ import sql.SqlConnector;
 public class CustomerManager {
 	SqlConnector sqlConnector = new SqlConnector();
 	
+	//User registration. return user id if succeed, return -1 if failed.
 	public int register(Customer customer){
 		Connection conn = sqlConnector.sqlConnect();
 		int userId = 0;
@@ -24,14 +25,15 @@ public class CustomerManager {
 		    conn.close();
 		    
 		    userId = findUserId(customer.getUserName());
-		    System.out.println("The id for new customer is:"+userId);
+		    //System.out.println("The id for new customer is:"+userId);
 		    return userId;
 		} catch(SQLException e){
-			System.out.println(e);
+			e.printStackTrace();
 			return -1;
 		}
 	}
 	
+	//Find user id by name. Return id if the user exists in the database, return -1 if not.
 	public int findUserId(String name){
 		Connection conn = sqlConnector.sqlConnect();
 		int userId = 0;
@@ -50,6 +52,7 @@ public class CustomerManager {
 		}
 	}
 	
+	// Check the name/password information provided when attempt to login, return true if the information is correct, else false. 
 	public boolean login(String name, String password){
 		Connection conn =  sqlConnector.sqlConnect();
 		int resultCount = 0;
@@ -59,6 +62,7 @@ public class CustomerManager {
 			ResultSet rs = st.executeQuery(sql);
 			rs.last();
 			resultCount = rs.getRow();
+			conn.close();
 		} catch(SQLException e){
 			e.printStackTrace();
 		}

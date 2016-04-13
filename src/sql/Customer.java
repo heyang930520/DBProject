@@ -41,4 +41,8 @@ public class Customer {
 		this.userName = userName;
 		this.userPassword = userPassword;
 	}
+	
+	public Customer(){
+		super();
+	}
 }

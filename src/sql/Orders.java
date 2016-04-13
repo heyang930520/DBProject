@@ -63,4 +63,8 @@ public class Orders {
 		this.orderAmount = orderAmount;
 		this.orderStatus = orderStatus;
 	}
+	
+	public Orders(){
+		super();
+	}
 }

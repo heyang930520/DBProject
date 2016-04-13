@@ -51,4 +51,8 @@ public class Product {
 		this.productCount = productCount;
 		this.productType = productType;
 	}
+	
+	public Product(){
+		super();
+	}
 }
