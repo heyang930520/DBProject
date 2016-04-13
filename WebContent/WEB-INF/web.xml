@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID">
+  <display-name>db_project</display-name>
+  <servlet>
+    <description>Register for User</description>
+    <display-name>Register</display-name>
+    <servlet-name>Register</servlet-name>
+    <servlet-class>controller.Register</servlet-class>
+  </servlet>
+  <servlet>
+    <description>User login</description>
+    <display-name>Login</display-name>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>controller.Login</servlet-class>
+  </servlet>
+  <servlet>
+    <description>listAllProducts in sql.ProductManager</description>
+    <display-name>ListProduct</display-name>
+    <servlet-name>ListProduct</servlet-name>
+    <servlet-class>controller.ListProduct</servlet-class>
+  </servlet>
+  <servlet>
+    <description>Update product count</description>
+    <display-name>UpdateProduct</display-name>
+    <servlet-name>UpdateProduct</servlet-name>
+    <servlet-class>controller.UpdateProduct</servlet-class>
+  </servlet>
+  <servlet>
+    <description>Delete product</description>
+    <display-name>DeleteProduct</display-name>
+    <servlet-name>DeleteProduct</servlet-name>
+    <servlet-class>controller.DeleteProduct</servlet-class>
+  </servlet>
+  <servlet>
+    <description>Add a new product</description>
+    <display-name>AddProduct</display-name>
+    <servlet-name>AddProduct</servlet-name>
+    <servlet-class>controller.AddProduct</servlet-class>
+  </servlet>
+  <servlet>
+    <description>Add a new order</description>
+    <display-name>AddOrder</display-name>
+    <servlet-name>AddOrder</servlet-name>
+    <servlet-class>controller.AddOrder</servlet-class>
+  </servlet>
+  <servlet>
+    <description>List a customer's orders</description>
+    <display-name>ListOrdersById</display-name>
+    <servlet-name>ListOrdersById</servlet-name>
+    <servlet-class>controller.ListOrdersById</servlet-class>
+  </servlet>
+  <servlet>
+    <description>Delete order by id</description>
+    <display-name>DeleteOrder</display-name>
+    <servlet-name>DeleteOrder</servlet-name>
+    <servlet-class>controller.DeleteOrder</servlet-class>
+  </servlet>
+  <servlet>
+    <description>List all orders</description>
+    <display-name>ListAllOrders</display-name>
+    <servlet-name>ListAllOrders</servlet-name>
+    <servlet-class>controller.ListAllOrders</servlet-class>
+  </servlet>
+  <servlet>
+    <description>Admin delete order</description>
+    <display-name>DeleteOrderByAdmin</display-name>
+    <servlet-name>DeleteOrderByAdmin</servlet-name>
+    <servlet-class>controller.DeleteOrderByAdmin</servlet-class>
+  </servlet>
+  <servlet>
+    <description>Update order status</description>
+    <display-name>UpdateOrder</display-name>
+    <servlet-name>UpdateOrder</servlet-name>
+    <servlet-class>controller.UpdateOrder</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Register</servlet-name>
+    <url-pattern>/Register</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListProduct</servlet-name>
+    <url-pattern>/ListProduct</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateProduct</servlet-name>
+    <url-pattern>/UpdateProduct</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteProduct</servlet-name>
+    <url-pattern>/DeleteProduct</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddProduct</servlet-name>
+    <url-pattern>/AddProduct</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddOrder</servlet-name>
+    <url-pattern>/AddOrder</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListOrdersById</servlet-name>
+    <url-pattern>/ListOrdersById</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteOrder</servlet-name>
+    <url-pattern>/DeleteOrder</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListAllOrders</servlet-name>
+    <url-pattern>/ListAllOrders</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteOrderByAdmin</servlet-name>
+    <url-pattern>/DeleteOrderByAdmin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateOrder</servlet-name>
+    <url-pattern>/UpdateOrder</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
